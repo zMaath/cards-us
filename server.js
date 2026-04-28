@@ -54,14 +54,6 @@ app.post('/api/upload', upload.single('imagem'), async (req, res) => {
   }
 });
 
-app.get('/cards/:file', (req, res) => {
-  const file = req.params.file;
-
-  const cdnUrl = `https://cdn.jsdelivr.net/gh/zMaath/cards-us@main/cards/${file}`;
-
-  res.redirect(cdnUrl);
-});
-
 
 app.listen(8080, () => {
   console.log('Servidor rodando em http://localhost:8080');
